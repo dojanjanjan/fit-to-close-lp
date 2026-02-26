@@ -71,7 +71,7 @@ export default function BookNow() {
           {/* Content Column */}
           <div className="lg:col-span-6 space-y-12 animate-slideIn">
             <header className="space-y-6">
-              <div className="font-mono text-accent text-sm tracking-[0.3em] uppercase">Limited Availability / Q2 2026</div>
+              <div className="font-mono text-accent text-sm tracking-[0.3em] uppercase">Limited Availability / Masterclass</div>
               <h1 className="font-display text-7xl md:text-9xl font-black uppercase leading-[0.85] tracking-tighter">
                 {t.title.split(' ')[0]}<br />
                 <span className="text-white">{t.title.split(' ').slice(1).join(' ')}</span>
@@ -80,7 +80,7 @@ export default function BookNow() {
 
             <div className="space-y-8">
               <p className="text-muted text-xl font-light leading-relaxed">
-                The Masterclass is limited to 15 participants to ensure high-impact coaching and direct engagement with the architects. 
+                Connect with the elite. Elevate your system. This is your high-stakes upgrade. Join us on the rooftops of Bangkok.
               </p>
               
               <div className="grid grid-cols-2 gap-px bg-white/10 border border-white/10">
@@ -112,7 +112,7 @@ export default function BookNow() {
 
           {/* Form Column */}
           <div className="lg:col-span-6">
-            <div className="sticky top-32 bg-white/[0.02] border border-white/10 p-12 md:p-16 space-y-12 backdrop-blur-sm">
+            <div className="sticky top-32 bg-white/[0.02] border border-white/10 p-12 md:p-16 space-y-12 backdrop-blur-sm shadow-2xl shadow-accent/5">
               <div className="space-y-2">
                 <h2 className="font-display text-3xl font-black uppercase tracking-tight">Registration</h2>
                 <div className="h-0.5 bg-accent w-12" />

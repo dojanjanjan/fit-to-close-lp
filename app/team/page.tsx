@@ -22,7 +22,7 @@ export default function Team() {
       name: "The Closer",
       role: t.closer,
       location: "Bangkok",
-      bio: "Master of tactical negotiation. Specializes in complex high-ticket closing and psychological leverage. The architect of the FTC closing scripts.",
+      bio: "Master of tactical negotiation and mindset optimization. Specializes in complex high-ticket closing and psychological leverage. Part of our rotating roster of world-class experts.",
       image: "/images/team/team_1.png"
     }
   ]
@@ -33,12 +33,15 @@ export default function Team() {
       
       <main className="max-w-7xl mx-auto px-8 py-24">
         <header className="mb-32 animate-slideIn">
-          <div className="font-mono text-accent text-sm mb-4 tracking-[0.3em] uppercase">Human Capital / Leadership</div>
+          <div className="font-mono text-accent text-sm mb-4 tracking-[0.3em] uppercase">{t.tagline}</div>
           <h1 className="font-display text-7xl md:text-9xl font-black uppercase leading-[0.85] mb-12 tracking-tighter">
             {t.title.split(' ')[0]}<br />
             <span className="text-white">{t.title.split(' ').slice(1).join(' ')}</span>
           </h1>
-          <div className="h-px bg-white/10 w-full mb-12" />
+          <p className="font-mono text-lg text-muted max-w-2xl uppercase tracking-tighter leading-tight mb-12">
+            {t.subtitle}
+          </p>
+          <div className="h-px bg-white/10 w-full" />
         </header>
 
         <section className="space-y-32">
@@ -66,21 +69,21 @@ export default function Team() {
                 </p>
                 <div className="pt-4 flex gap-4">
                   <div className="w-12 h-px bg-accent self-center" />
-                  <span className="font-mono text-[10px] uppercase text-muted tracking-widest">Available for Private Coaching</span>
+                  <span className="font-mono text-[10px] uppercase text-muted tracking-widest">Rotating Expert Roster</span>
                 </div>
               </div>
             </div>
           ))}
         </section>
 
-        {/* Network Section */}
-        <section className="mt-48 pt-24 border-t border-white/10 text-center">
-          <h2 className="font-display text-4xl font-black uppercase mb-16 tracking-tight">The Global Network</h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-12 opacity-40 hover:opacity-100 transition-opacity duration-500">
-             {['AIMPOWER', 'HEY BRAND', 'YOUNG CREATIVES', 'BKK DISTRICT'].map((partner, i) => (
-               <div key={i} className="font-display text-xl tracking-tighter grayscale">{partner}</div>
-             ))}
-          </div>
+        {/* Categories Section */}
+        <section className="mt-48 grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+           {['SALES STRATEGY', 'MINDSET COACHING', 'NUTRITION EXPERTS'].map((cat, i) => (
+             <div key={i} className="bg-bg p-12 text-center group hover:bg-accent/5 transition-colors">
+                <div className="font-display text-2xl uppercase tracking-tighter">{cat}</div>
+                <div className="mt-4 font-mono text-[10px] text-muted tracking-widest uppercase">Expert Pillar 0{i+1}</div>
+             </div>
+           ))}
         </section>
       </main>
 
