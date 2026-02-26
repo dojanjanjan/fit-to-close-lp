@@ -5,8 +5,8 @@ export default function TestimonialSection() {
     <section className="relative z-10 bg-bg py-32 border-t border-muted">
       <div className="max-w-[1200px] mx-auto px-8">
         <div className="relative flex flex-col items-center justify-center text-center">
-          <div className="relative inline-block max-w-3xl pr-32 md:pr-40">
-            <div className="absolute -top-4 right-0 md:-right-8 z-10">
+          <div className="relative inline-block max-w-3xl md:pr-40">
+            <div className="md:absolute -top-4 right-0 md:-right-8 z-10 mb-8 md:mb-0">
               <div className="flex flex-col items-center gap-2">
                 <div className="polaroid-frame">
                   <Image
@@ -28,7 +28,7 @@ export default function TestimonialSection() {
                 </div>
               </div>
             </div>
-            <blockquote className="font-mono text-xl md:text-2xl leading-relaxed text-text mb-6 text-right mt-16">
+            <blockquote className="font-mono text-xl md:text-2xl leading-relaxed text-text mb-6 text-center md:text-right">
               <span className="block">&ldquo;Winning is a habit.</span>
               <span className="block">You don&apos;t start winning at 9:00 AM;</span>
               <span className="block">you start at 5:00 AM in the gym.&rdquo;</span>
