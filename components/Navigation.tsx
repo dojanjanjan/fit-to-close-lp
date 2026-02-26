@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from 'react'
+import LanguageSelector from './LanguageSelector'
 
 export default function Navigation() {
   const [scrolled, setScrolled] = useState(false)
@@ -20,9 +21,7 @@ export default function Navigation() {
   }
 
   return (
-    <nav className={`sticky top-0 z-50 flex justify-between items-center py-8 px-8 uppercase text-sm tracking-wider transition-all duration-300 ${
-      scrolled ? 'bg-black/80 backdrop-blur-sm' : ''
-    }`}>
+    <nav className="sticky top-0 z-[100] flex justify-between items-center py-8 px-8 uppercase text-sm tracking-wider transition-all duration-300 bg-black/80 backdrop-blur-sm">
       <div className="flex items-center gap-3">
         <div className="font-display text-2xl font-black italic bg-gradient-to-b from-white to-accent bg-clip-text text-transparent">
           FTC<span className="text-xs">©</span>
@@ -32,20 +31,23 @@ export default function Navigation() {
         </div>
       </div>
       
-      {/* Desktop Menu */}
-      <div className="hidden md:flex gap-8">
-        <a href="#program" className="text-text hover:text-accent transition-colors">
-          About
-        </a>
-        <a href="#team" className="text-text hover:text-accent transition-colors">
-          Team
-        </a>
-        <a href="#book-now" className="text-text hover:text-accent transition-colors">
-          Book now
-        </a>
-        <a href="#contact" className="text-text hover:text-accent transition-colors">
-          Contact
-        </a>
+      <div className="flex items-center gap-4">
+        {/* Desktop Menu */}
+          <div className="hidden md:flex gap-8">
+            <a href="#program" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+              About
+            </a>
+            <a href="#team" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+              Team
+            </a>
+            <a href="#book-now" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+              Book now
+            </a>
+            <a href="#contact" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+              Contact
+            </a>
+          </div>
+        <LanguageSelector />
       </div>
 
       {/* Mobile Burger Icon */}
