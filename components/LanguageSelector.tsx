@@ -1,30 +1,14 @@
 'use client'
 
-import { useState, useEffect } from 'react'
-
-type Language = 'en' | 'th'
+import { useLanguage } from '@/context/LanguageContext'
 
 export default function LanguageSelector() {
-  const [language, setLanguage] = useState<Language>('en')
-
-  useEffect(() => {
-    // Load saved language from localStorage
-    const savedLanguage = localStorage.getItem('language') as Language
-    if (savedLanguage && (savedLanguage === 'en' || savedLanguage === 'th')) {
-      setLanguage(savedLanguage)
-    }
-  }, [])
-
-  const handleLanguageChange = (lang: Language) => {
-    setLanguage(lang)
-    localStorage.setItem('language', lang)
-    // You can add language change logic here (e.g., context, i18n)
-  }
+  const { language, setLanguage } = useLanguage()
 
   return (
     <div className="flex items-center gap-2">
       <button
-        onClick={() => handleLanguageChange('en')}
+        onClick={() => setLanguage('en')}
         className={`font-mono text-xs uppercase tracking-wider transition-colors ${
           language === 'en'
             ? 'text-accent'
@@ -35,7 +19,7 @@ export default function LanguageSelector() {
       </button>
       <span className="text-muted">/</span>
       <button
-        onClick={() => handleLanguageChange('th')}
+        onClick={() => setLanguage('th')}
         className={`font-mono text-xs uppercase tracking-wider transition-colors ${
           language === 'th'
             ? 'text-accent'

@@ -34,13 +34,13 @@ export default function Navigation() {
       <div className="flex items-center gap-4">
         {/* Desktop Menu */}
           <div className="hidden md:flex gap-8">
-            <a href="#program" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+            <a href="/about" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
               About
             </a>
-            <a href="#team" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+            <a href="/team" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
               Team
             </a>
-            <a href="#book-now" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+            <a href="/book-now" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
               Book now
             </a>
             <a href="#contact" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
@@ -67,21 +67,21 @@ export default function Navigation() {
       }`}>
         <div className="flex flex-col gap-6 p-8 pt-24">
           <a 
-            href="#program" 
+            href="/about" 
             className="text-text hover:text-accent transition-colors uppercase"
             onClick={() => setMenuOpen(false)}
           >
             About
           </a>
           <a 
-            href="#team" 
+            href="/team" 
             className="text-text hover:text-accent transition-colors uppercase"
             onClick={() => setMenuOpen(false)}
           >
             Team
           </a>
           <a 
-            href="#book-now" 
+            href="/book-now" 
             className="text-text hover:text-accent transition-colors uppercase"
             onClick={() => setMenuOpen(false)}
           >
