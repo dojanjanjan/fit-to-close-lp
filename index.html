@@ -6,15 +6,16 @@
     <title>FIT TO CLOSE | 5H Performance Masterclass Bangkok</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Space+Grotesk:wght@300;700&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
     <style>
         :root {
-            --bg: #0a0a0a;
+            --bg: #050505;
             --text: #ffffff;
-            --accent: #ceff00; /* Electric Lime */
-            --muted: #444;
+            --accent: #ceff00; 
+            --muted: #666;
             --mono: 'JetBrains Mono', monospace;
-            --display: 'Archivo Black', sans-serif;
+            --display: 'Syncopate', sans-serif;
+            --body: 'Space Grotesk', sans-serif;
         }
 
         * {
@@ -26,13 +27,13 @@
         body {
             background-color: var(--bg);
             color: var(--text);
-            font-family: var(--mono);
-            line-height: 1.5;
+            font-family: var(--body);
+            line-height: 1.4;
             overflow-x: hidden;
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Brutalist Grid Background */
+        /* Glitchy/Noise Background */
         body::before {
             content: "";
             position: fixed;
@@ -40,17 +41,18 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background-image: 
-                linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
-            background-size: 40px 40px;
+            background: 
+                radial-gradient(circle at 50% 50%, rgba(206, 255, 0, 0.05), transparent 80%),
+                url('https://grainy-gradients.vercel.app/noise.svg');
+            opacity: 0.4;
             z-index: -1;
+            pointer-events: none;
         }
 
         .container {
-            max-width: 1200px;
+            max-width: 1400px;
             margin: 0 auto;
-            padding: 0 2rem;
+            padding: 0 4vw;
         }
 
         /* Navigation */
@@ -58,36 +60,24 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 2rem 0;
+            padding: 3rem 0;
             text-transform: uppercase;
-            font-size: 0.8rem;
-            letter-spacing: 0.1em;
+            font-size: 0.75rem;
+            letter-spacing: 0.3em;
+            font-weight: 700;
         }
 
         .logo {
             font-family: var(--display);
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-        }
-
-        .nav-links a {
-            color: var(--text);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
+            border: 2px solid var(--accent);
+            padding: 0.5rem 1rem;
         }
 
         /* Hero Section */
         header {
-            height: 80vh;
+            min-height: 90vh;
             display: flex;
             flex-direction: column;
             justify-content: center;
@@ -96,137 +86,168 @@
 
         h1 {
             font-family: var(--display);
-            font-size: clamp(4rem, 12vw, 10rem);
-            line-height: 0.85;
+            font-size: clamp(3rem, 15vw, 14rem);
+            line-height: 0.8;
             text-transform: uppercase;
-            margin-bottom: 2rem;
-            letter-spacing: -0.02em;
-            animation: slideIn 1s cubic-bezier(0.16, 1, 0.3, 1);
+            margin-bottom: 4rem;
+            letter-spacing: -0.05em;
+            font-weight: 700;
+            font-style: italic;
+            transform: skewX(-5deg);
+            animation: powerOn 0.8s cubic-bezier(0.23, 1, 0.32, 1);
+        }
+
+        h1 span {
+            display: block;
+            -webkit-text-stroke: 1px var(--text);
+            color: transparent;
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--accent);
         }
 
         .hero-tagline {
-            display: flex;
-            flex-direction: column;
-            gap: 1rem;
-            max-width: 600px;
+            display: grid;
+            grid-template-columns: 1fr 1.5fr;
+            gap: 2rem;
+            align-items: start;
         }
 
         .badge {
             display: inline-block;
-            background: var(--accent);
-            color: var(--bg);
-            padding: 0.2rem 0.6rem;
+            background: transparent;
+            border: 1px solid var(--accent);
+            color: var(--accent);
+            padding: 0.4rem 1rem;
             font-weight: 700;
-            width: fit-content;
-            font-size: 0.9rem;
+            font-size: 0.8rem;
+            letter-spacing: 0.2em;
+            margin-bottom: 2rem;
         }
 
         .hero-desc {
-            font-size: 1.2rem;
-            color: var(--muted);
-            text-transform: uppercase;
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text);
+            max-width: 500px;
         }
 
         /* The Stack Section */
         .stack-section {
-            padding: 8rem 0;
-            border-top: 1px solid var(--muted);
+            padding: 12rem 0;
         }
 
         .section-header {
-            margin-bottom: 4rem;
+            margin-bottom: 6rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            border-bottom: 1px solid var(--muted);
+            padding-bottom: 2rem;
         }
 
         .section-header h2 {
             font-family: var(--display);
-            font-size: 3rem;
+            font-size: 4rem;
             text-transform: uppercase;
-            color: var(--accent);
+            letter-spacing: -0.02em;
         }
 
         .grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1px;
+            background: var(--muted);
+            border: 1px solid var(--muted);
         }
 
         .card {
-            border: 1px solid var(--muted);
-            padding: 2rem;
-            transition: transform 0.3s, border-color 0.3s;
-            position: relative;
             background: var(--bg);
+            padding: 4rem 2rem;
+            transition: background 0.4s;
+            cursor: crosshair;
         }
 
         .card:hover {
-            border-color: var(--accent);
-            transform: translateY(-5px);
+            background: var(--accent);
+            color: var(--bg);
         }
 
         .card-num {
-            font-size: 0.8rem;
-            color: var(--accent);
-            margin-bottom: 1rem;
+            font-family: var(--mono);
+            font-size: 0.7rem;
+            margin-bottom: 4rem;
             display: block;
         }
 
         .card h3 {
             font-family: var(--display);
-            font-size: 1.5rem;
-            margin-bottom: 1rem;
+            font-size: 2rem;
+            margin-bottom: 2rem;
             text-transform: uppercase;
+            line-height: 1;
         }
 
         /* CTA Section */
         .cta-section {
-            padding: 10rem 0;
-            text-align: center;
-            background: var(--accent);
-            color: var(--bg);
-            clip-path: polygon(0 15%, 100% 0, 100% 85%, 0 100%);
+            padding: 15rem 0;
+            text-align: left;
         }
 
         .cta-section h2 {
             font-family: var(--display);
-            font-size: 5rem;
+            font-size: clamp(3rem, 10vw, 8rem);
             text-transform: uppercase;
-            margin-bottom: 2rem;
+            margin-bottom: 4rem;
+            line-height: 0.9;
         }
 
         .btn {
             display: inline-block;
-            background: var(--bg);
-            color: var(--accent);
-            padding: 1.5rem 4rem;
+            background: var(--accent);
+            color: var(--bg);
+            padding: 2rem 5rem;
             text-decoration: none;
             font-family: var(--display);
-            font-size: 1.5rem;
+            font-size: 2rem;
             text-transform: uppercase;
-            transition: transform 0.2s;
+            font-weight: 700;
+            clip-path: polygon(10% 0, 100% 0, 90% 100%, 0 100%);
+            transition: all 0.3s;
         }
 
         .btn:hover {
-            transform: scale(1.05);
+            transform: scale(1.05) skewX(-10deg);
+            background: var(--text);
         }
 
         footer {
-            padding: 4rem 0;
-            text-align: center;
-            font-size: 0.7rem;
+            padding: 6rem 0;
+            border-top: 1px solid var(--muted);
+            font-family: var(--mono);
+            font-size: 0.6rem;
             color: var(--muted);
-            text-transform: uppercase;
-            letter-spacing: 0.2em;
+            display: flex;
+            justify-content: space-between;
         }
 
         /* Animations */
-        @keyframes slideIn {
-            from { transform: translateX(-50px); opacity: 0; }
-            to { transform: translateX(0); opacity: 1; }
+        @keyframes powerOn {
+            0% { opacity: 0; transform: scale(0.95) skewX(10deg); filter: blur(10px); }
+            100% { opacity: 1; transform: scale(1) skewX(-5deg); filter: blur(0); }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1024px) {
+            .grid { grid-template-columns: 1fr 1fr; }
+            .hero-tagline { grid-template-columns: 1fr; }
+        }
+
+        @media (max-width: 640px) {
+            .grid { grid-template-columns: 1fr; }
             h1 { font-size: 4rem; }
-            .cta-section h2 { font-size: 2.5rem; }
+            .section-header h2 { font-size: 2.5rem; }
         }
     </style>
 </head>
@@ -234,64 +255,64 @@
 
     <div class="container">
         <nav>
-            <div class="logo">FTC</div>
+            <div class="logo">FIT TO CLOSE</div>
             <div class="nav-links">
-                <a href="#about">About</a>
-                <a href="#program">Program</a>
-                <a href="#contact">Contact</a>
+                <a href="#program">// PROGRAM</a>
+                <a href="#contact">// APPLY</a>
             </div>
         </nav>
 
         <header>
-            <div class="badge">BANGKOK 2026</div>
-            <h1>FIT TO<br>CLOSE</h1>
+            <div class="badge">BKK EDITION 2026</div>
+            <h1>FIT TO<br><span>CLOSE</span><em>.</em></h1>
             <div class="hero-tagline">
-                <p class="hero-desc">The 5H Performance Masterclass for high-stakes closers & sales leaders.</p>
-                <p>Mindset. Movement. Nutrition. Sales Closing.</p>
+                <div class="hero-desc">The 5H High-Stakes Performance Masterclass.</div>
+                <div style="font-family: var(--mono); font-size: 0.8rem; color: var(--muted);">
+                    [ PHASE_01: MINDSET ]<br>
+                    [ PHASE_02: MOVEMENT ]<br>
+                    [ PHASE_03: NUTRITION ]<br>
+                    [ PHASE_04: REVENUE ]
+                </div>
             </div>
         </header>
 
         <section id="program" class="stack-section">
             <div class="section-header">
-                <h2>THE 5H STACK</h2>
+                <h2>CORE STACK</h2>
+                <span style="font-family: var(--mono); font-size: 0.7rem;">EST. TIME: 300 MIN</span>
             </div>
             <div class="grid">
                 <div class="card">
-                    <span class="card-num">01 / MINDSET</span>
-                    <h3>BREATHWORK</h3>
-                    <p>Controlled stress response for high-pressure negotiations.</p>
+                    <span class="card-num">[ 01 ]</span>
+                    <h3>BREATH WORK</h3>
+                    <p>Stress-Modulation für Verhandlungen am Limit.</p>
                 </div>
                 <div class="card">
-                    <span class="card-num">02 / MOVEMENT</span>
-                    <h3>PERFORMANCE</h3>
-                    <p>Gym & Yoga designed for endurance and mental clarity.</p>
+                    <span class="card-num">[ 02 ]</span>
+                    <h3>PERFORM MOVE</h3>
+                    <p>Urban Movement & Strength für mentale Dominanz.</p>
                 </div>
                 <div class="card">
-                    <span class="card-num">03 / FUEL</span>
-                    <h3>NUTRITION</h3>
-                    <p>Strategic eating protocols to master the sales day.</p>
+                    <span class="card-num">[ 03 ]</span>
+                    <h3>FUEL LOGIC</h3>
+                    <p>Performance Nutrition. Keine Crashes. Maximaler Fokus.</p>
                 </div>
                 <div class="card">
-                    <span class="card-num">04 / REVENUE</span>
-                    <h3>THE CLOSE</h3>
-                    <p>Advanced strategies for closing high-ticket deals.</p>
+                    <span class="card-num">[ 04 ]</span>
+                    <h3>THE CLOSER</h3>
+                    <p>Advanced Closing-Psychologie für High-Ticket Deals.</p>
                 </div>
             </div>
         </section>
+
+        <section class="cta-section">
+            <h2>READY TO<br>MASTER<br>THE DAY?</h2>
+            <a href="#" class="btn">JOIN CORE</a>
+        </section>
+
+        <footer>
+            <div>YOUNG CREATIVES x FIT TO CLOSE</div>
+            <div>STAY FIT. CLOSE THE DEAL.</div>
+            <div>© 2026 BKK</div>
+        </footer>
     </div>
-
-    <section class="cta-section">
-        <div class="container">
-            <h2>JOIN THE CORE</h2>
-            <a href="#" class="btn">APPLY NOW</a>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <p>&copy; 2026 YOUNG CREATIVES x FIT TO CLOSE | ALL RIGHTS RESERVED.</p>
-        </div>
-    </footer>
-
-</body>
-</html>
