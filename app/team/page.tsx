@@ -38,7 +38,7 @@ export default function Team() {
             {t.title.split(' ')[0]}<br />
             <span className="text-white">{t.title.split(' ').slice(1).join(' ')}</span>
           </h1>
-          <p className="font-mono text-lg text-muted max-w-2xl uppercase tracking-tighter leading-tight mb-12">
+          <p className="font-mono text-lg text-white max-w-2xl uppercase tracking-tighter leading-tight mb-12">
             {t.subtitle}
           </p>
           <div className="h-px bg-white/10 w-full" />
@@ -64,12 +64,12 @@ export default function Team() {
                   <div className="font-mono text-accent text-sm uppercase tracking-widest">{member.role}</div>
                   <h2 className="font-display text-5xl md:text-6xl font-black uppercase tracking-tight">{member.name}</h2>
                 </div>
-                <p className="text-muted text-lg leading-relaxed font-light max-w-xl">
+                <p className="text-white text-lg leading-relaxed font-light max-w-xl">
                   {member.bio}
                 </p>
                 <div className="pt-4 flex gap-4">
                   <div className="w-12 h-px bg-accent self-center" />
-                  <span className="font-mono text-[10px] uppercase text-muted tracking-widest">Rotating Expert Roster</span>
+                  <span className="font-mono text-[10px] uppercase text-white tracking-widest">Rotating Expert Roster</span>
                 </div>
               </div>
             </div>
@@ -80,8 +80,8 @@ export default function Team() {
         <section className="mt-48 grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10">
            {['SALES STRATEGY', 'MINDSET COACHING', 'NUTRITION EXPERTS'].map((cat, i) => (
              <div key={i} className="bg-bg p-12 text-center group hover:bg-accent/5 transition-colors">
-                <div className="font-display text-2xl uppercase tracking-tighter">{cat}</div>
-                <div className="mt-4 font-mono text-[10px] text-muted tracking-widest uppercase">Expert Pillar 0{i+1}</div>
+                <div className="font-display text-2xl uppercase tracking-tighter text-white">{cat}</div>
+                <div className="mt-4 font-mono text-[10px] text-white tracking-widest uppercase">Expert Pillar 0{i+1}</div>
              </div>
            ))}
         </section>

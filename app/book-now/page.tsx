@@ -79,18 +79,18 @@ export default function BookNow() {
             </header>
 
             <div className="space-y-8">
-              <p className="text-muted text-xl font-light leading-relaxed">
+              <p className="text-white text-xl font-light leading-relaxed">
                 Connect with the elite. Elevate your system. This is your high-stakes upgrade. Join us on the rooftops of Bangkok.
               </p>
               
               <div className="grid grid-cols-2 gap-px bg-white/10 border border-white/10">
                 <div className="bg-white/[0.02] p-8 space-y-2">
                   <div className="font-display text-3xl">15</div>
-                  <div className="font-mono text-[10px] text-muted uppercase tracking-widest">Seats Total</div>
+                  <div className="font-mono text-[10px] text-white uppercase tracking-widest">Seats Total</div>
                 </div>
                 <div className="bg-white/[0.02] p-8 space-y-2">
                   <div className="font-display text-3xl text-accent">04</div>
-                  <div className="font-mono text-[10px] text-muted uppercase tracking-widest">Left for BKK</div>
+                  <div className="font-mono text-[10px] text-white uppercase tracking-widest">Left for BKK</div>
                 </div>
               </div>
 
@@ -98,9 +98,9 @@ export default function BookNow() {
                  <div className="font-display text-2xl uppercase mb-4">Standard Entry Package</div>
                  <div className="flex items-baseline gap-2 mb-6">
                     <span className="font-display text-5xl text-accent">€ 1.490</span>
-                    <span className="font-mono text-xs text-muted uppercase">inc. VAT</span>
+                    <span className="font-mono text-xs text-white uppercase">inc. VAT</span>
                  </div>
-                 <ul className="space-y-3 font-mono text-xs uppercase text-muted tracking-tight">
+                 <ul className="space-y-3 font-mono text-xs uppercase text-white tracking-tight">
                     <li className="flex gap-3"><span className="text-accent">/</span> Full 5H Performance Masterclass</li>
                     <li className="flex gap-3"><span className="text-accent">/</span> FTC Playbook (Hardcover + Digital)</li>
                     <li className="flex gap-3"><span className="text-accent">/</span> Private Rooftop Dinner Bangkok</li>

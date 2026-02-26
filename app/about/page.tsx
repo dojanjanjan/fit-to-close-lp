@@ -23,7 +23,7 @@ export default function About() {
             <span className="text-white">{t.title.split(' ').slice(1).join(' ')}</span>
           </h1>
           <div className="h-px bg-white/10 w-full mb-12" />
-          <p className="font-mono text-lg md:text-xl text-muted max-w-3xl uppercase leading-tight">
+          <p className="font-mono text-lg md:text-xl text-white max-w-3xl uppercase leading-tight">
             {t.tagline}
           </p>
         </header>
@@ -43,7 +43,7 @@ export default function About() {
           </div>
           <div className="lg:col-span-5 p-12 md:p-16 flex flex-col justify-center bg-white/[0.02]">
             <h2 className="font-display text-4xl font-black uppercase mb-8 tracking-tight">{t.vision}</h2>
-            <div className="space-y-6 text-muted leading-relaxed font-light text-lg">
+            <div className="space-y-6 text-white leading-relaxed font-light text-lg">
               <p>{t.vision_p1}</p>
               <p>{t.vision_p2}</p>
             </div>
@@ -55,14 +55,14 @@ export default function About() {
           <div className="bg-bg p-12 md:p-16 group hover:bg-accent/5 transition-colors">
             <div className="text-accent font-mono mb-8">01 / PERFORMANCE</div>
             <h3 className="font-display text-3xl font-black uppercase mb-6 tracking-tight">{t.urban}</h3>
-            <p className="text-muted leading-relaxed font-light">
+            <p className="text-white leading-relaxed font-light">
               {t.urban_p}
             </p>
           </div>
           <div className="bg-bg p-12 md:p-16 group hover:bg-accent/5 transition-colors">
             <div className="text-accent font-mono mb-8">02 / ACTIONABLE</div>
             <h3 className="font-display text-3xl font-black uppercase mb-6 tracking-tight">{t.logic}</h3>
-            <p className="text-muted leading-relaxed font-light">
+            <p className="text-white leading-relaxed font-light">
               {t.logic_p}
             </p>
           </div>
