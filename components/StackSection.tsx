@@ -23,7 +23,7 @@ const stackItems = [
 
 export default function StackSection() {
   return (
-    <section id="program" className="relative z-10 bg-bg py-32 border-t border-muted w-full">
+    <section id="program" className="relative z-10 bg-bg/80 py-32 border-t border-muted w-full">
       <div className="max-w-[1200px] mx-auto px-8">
         <div className="mb-16">
           <h2 className="font-display text-5xl uppercase text-accent">
