@@ -33,24 +33,27 @@ export default function BookNow() {
 
   if (success) {
     return (
-      <div className="bg-bg min-h-screen text-text flex flex-col">
+      <div className="bg-bg min-h-screen text-text flex flex-col selection:bg-accent selection:text-black animate-slideIn">
         <Navigation />
         <main className="flex-grow flex items-center justify-center p-8">
-          <div className="max-w-md w-full border border-accent p-12 text-center space-y-8 bg-accent/5">
-            <div className="w-24 h-24 border-4 border-accent rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
-              <span className="text-accent text-4xl">✓</span>
+          <div className="max-w-2xl w-full border border-accent p-16 md:p-24 text-center space-y-12 bg-accent/[0.02] backdrop-blur-xl relative overflow-hidden">
+            <div className="absolute inset-0 border-[20px] border-accent/5 pointer-events-none" />
+            <div className="w-32 h-32 border-8 border-accent rounded-full flex items-center justify-center mx-auto mb-8 animate-pulse">
+              <span className="text-accent text-6xl">✓</span>
             </div>
-            <h1 className="font-display text-4xl font-black uppercase italic">{t.success_title}</h1>
-            <p className="font-mono text-muted uppercase text-sm">
-              {t.success_p}
-            </p>
+            <div className="space-y-4">
+              <h1 className="font-display text-5xl md:text-7xl font-black uppercase tracking-tight">{t.success_title}</h1>
+              <p className="font-mono text-muted uppercase text-md tracking-wider max-w-md mx-auto">
+                {t.success_p}
+              </p>
+            </div>
             <div className="h-px bg-accent/20 w-full" />
-            <button 
-              onClick={() => setSuccess(false)}
-              className="text-accent font-mono text-xs uppercase tracking-widest hover:underline"
+            <a 
+              href="/"
+              className="inline-block bg-accent text-black px-12 py-4 font-display uppercase font-black hover:bg-white transition-colors"
             >
-              Back to Dashboard
-            </button>
+              Enter Dashboard
+            </a>
           </div>
         </main>
         <Footer />
@@ -59,90 +62,116 @@ export default function BookNow() {
   }
 
   return (
-    <div className="bg-bg min-h-screen text-text font-sans">
+    <div className="bg-bg min-h-screen text-text font-sans selection:bg-accent selection:text-black">
       <Navigation />
       
       <main className="max-w-7xl mx-auto px-8 py-24">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-24">
-          <div>
-            <h1 className="font-display text-6xl md:text-8xl font-black uppercase italic leading-none mb-8 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
-              {t.title.split(' ')[0]}<br />{t.title.split(' ').slice(1).join(' ')}
-            </h1>
-            <p className="font-mono text-xl text-muted max-w-sm uppercase tracking-tighter mb-12">
-              Limited slots. High stakes. The Masterclass starts soon.
-            </p>
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-32">
+          
+          {/* Content Column */}
+          <div className="lg:col-span-6 space-y-12 animate-slideIn">
+            <header className="space-y-6">
+              <div className="font-mono text-accent text-sm tracking-[0.3em] uppercase">Limited Availability / Q2 2026</div>
+              <h1 className="font-display text-7xl md:text-9xl font-black uppercase leading-[0.85] tracking-tighter">
+                {t.title.split(' ')[0]}<br />
+                <span className="text-white">{t.title.split(' ').slice(1).join(' ')}</span>
+              </h1>
+            </header>
 
             <div className="space-y-8">
-              <div className="p-8 border-l-4 border-accent bg-accent/5">
-                <div className="font-display text-2xl uppercase mb-2">Standard Entry</div>
-                <div className="font-mono text-accent text-xl mb-4">€ 1.490</div>
-                <ul className="text-muted text-sm space-y-2 uppercase list-disc list-inside">
-                  <li>Full 5H Masterclass access</li>
-                  <li>FTC Playbook (Digital)</li>
-                  <li>BKK Networking Dinner</li>
-                </ul>
-              </div>
+              <p className="text-muted text-xl font-light leading-relaxed">
+                The Masterclass is limited to 15 participants to ensure high-impact coaching and direct engagement with the architects. 
+              </p>
               
-              <div className="relative aspect-video bg-muted overflow-hidden border border-white/5">
-                <Image src="/images/book-now/book_1.png" alt="Premium Access" fill className="object-cover opacity-80" />
+              <div className="grid grid-cols-2 gap-px bg-white/10 border border-white/10">
+                <div className="bg-white/[0.02] p-8 space-y-2">
+                  <div className="font-display text-3xl">15</div>
+                  <div className="font-mono text-[10px] text-muted uppercase tracking-widest">Seats Total</div>
+                </div>
+                <div className="bg-white/[0.02] p-8 space-y-2">
+                  <div className="font-display text-3xl text-accent">04</div>
+                  <div className="font-mono text-[10px] text-muted uppercase tracking-widest">Left for BKK</div>
+                </div>
+              </div>
+
+              <div className="p-8 bg-accent/5 border border-accent/20">
+                 <div className="font-display text-2xl uppercase mb-4">Standard Entry Package</div>
+                 <div className="flex items-baseline gap-2 mb-6">
+                    <span className="font-display text-5xl text-accent">€ 1.490</span>
+                    <span className="font-mono text-xs text-muted uppercase">inc. VAT</span>
+                 </div>
+                 <ul className="space-y-3 font-mono text-xs uppercase text-muted tracking-tight">
+                    <li className="flex gap-3"><span className="text-accent">/</span> Full 5H Performance Masterclass</li>
+                    <li className="flex gap-3"><span className="text-accent">/</span> FTC Playbook (Hardcover + Digital)</li>
+                    <li className="flex gap-3"><span className="text-accent">/</span> Private Rooftop Dinner Bangkok</li>
+                    <li className="flex gap-3"><span className="text-accent">/</span> Lifetime Elite Network Access</li>
+                 </ul>
               </div>
             </div>
           </div>
 
-          <div className="relative">
-            <div className="sticky top-32 p-12 bg-black border border-white/10 shadow-2xl shadow-accent/5">
-              <h2 className="font-display text-3xl font-black uppercase italic mb-8">Registration</h2>
+          {/* Form Column */}
+          <div className="lg:col-span-6">
+            <div className="sticky top-32 bg-white/[0.02] border border-white/10 p-12 md:p-16 space-y-12 backdrop-blur-sm">
+              <div className="space-y-2">
+                <h2 className="font-display text-3xl font-black uppercase tracking-tight">Registration</h2>
+                <div className="h-0.5 bg-accent w-12" />
+              </div>
               
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div>
-                  <label className="block font-mono text-xs uppercase text-muted mb-2 tracking-widest">{t.form_name}</label>
+              <form onSubmit={handleSubmit} className="space-y-8">
+                <div className="space-y-2 group">
+                  <label className="block font-mono text-[10px] uppercase text-muted tracking-widest group-focus-within:text-accent transition-colors">{t.form_name}</label>
                   <input 
                     required
                     type="text" 
-                    className="w-full bg-transparent border-b border-muted p-3 focus:outline-none focus:border-accent text-text font-mono transition-colors"
-                    placeholder="Enter name"
+                    className="w-full bg-transparent border-b border-white/20 py-4 focus:outline-none focus:border-accent text-white font-mono transition-all text-lg"
+                    placeholder="NAME SURNAME"
                     value={form.name}
                     onChange={(e) => setForm({ ...form, name: e.target.value })}
                   />
                 </div>
-                <div>
-                  <label className="block font-mono text-xs uppercase text-muted mb-2 tracking-widest">{t.form_email}</label>
+                <div className="space-y-2 group">
+                  <label className="block font-mono text-[10px] uppercase text-muted tracking-widest group-focus-within:text-accent transition-colors">{t.form_email}</label>
                   <input 
                     required
                     type="email" 
-                    className="w-full bg-transparent border-b border-muted p-3 focus:outline-none focus:border-accent text-text font-mono transition-colors"
-                    placeholder="Enter email"
+                    className="w-full bg-transparent border-b border-white/20 py-4 focus:outline-none focus:border-accent text-white font-mono transition-all text-lg"
+                    placeholder="EMAIL@DOMAIN.COM"
                     value={form.email}
                     onChange={(e) => setForm({ ...form, email: e.target.value })}
                   />
                 </div>
-                <div>
-                  <label className="block font-mono text-xs uppercase text-muted mb-2 tracking-widest">{t.form_company}</label>
+                <div className="space-y-2 group">
+                  <label className="block font-mono text-[10px] uppercase text-muted tracking-widest group-focus-within:text-accent transition-colors">{t.form_company}</label>
                   <input 
                     type="text" 
-                    className="w-full bg-transparent border-b border-muted p-3 focus:outline-none focus:border-accent text-text font-mono transition-colors"
-                    placeholder="Enter company"
+                    className="w-full bg-transparent border-b border-white/20 py-4 focus:outline-none focus:border-accent text-white font-mono transition-all text-lg"
+                    placeholder="ORGANIZATION"
                     value={form.company}
                     onChange={(e) => setForm({ ...form, company: e.target.value })}
                   />
                 </div>
 
-                <div className="pt-8">
-                  <div className="flex items-center gap-4 mb-8 grayscale opacity-50">
-                    <div className="text-[10px] font-mono border border-muted px-2 py-1">VISA</div>
-                    <div className="text-[10px] font-mono border border-muted px-2 py-1">MASTERCARD</div>
-                    <div className="text-[10px] font-mono border border-muted px-2 py-1 text-accent border-accent">OMISE SECURE</div>
+                <div className="pt-8 space-y-8">
+                  <div className="flex items-center justify-between grayscale opacity-30 hover:opacity-100 transition-opacity">
+                    <span className="font-mono text-[10px] uppercase tracking-tighter text-muted">Secured by Omise</span>
+                    <div className="flex gap-4">
+                      <div className="w-8 h-5 bg-white/10 rounded-sm" />
+                      <div className="w-8 h-5 bg-white/10 rounded-sm" />
+                    </div>
                   </div>
 
                   <button 
                     disabled={loading}
                     type="submit"
-                    className="w-full bg-accent text-black font-display text-xl p-6 uppercase italic font-black hover:bg-white transition-colors duration-300 disabled:opacity-50"
+                    className="group relative w-full bg-white text-black font-display text-2xl py-8 uppercase font-black hover:bg-accent transition-all duration-500 disabled:opacity-50 overflow-hidden"
                   >
-                    {loading ? 'Processing...' : t.form_btn}
+                    <span className="relative z-10">{loading ? 'Processing...' : t.form_btn}</span>
+                    <div className="absolute inset-0 bg-accent translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
                   </button>
-                  <p className="mt-4 text-[10px] text-muted font-mono uppercase text-center tracking-widest">
-                    Your payment is secured by Omise. Total: € 1.490
+                  
+                  <p className="text-[10px] text-muted font-mono uppercase text-center tracking-widest leading-relaxed">
+                    By clicking complete payment, you agree to the FTC terms of performance. All sales are final. Access is non-transferable.
                   </p>
                 </div>
               </form>
