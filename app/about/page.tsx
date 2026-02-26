@@ -68,15 +68,21 @@ export default function About() {
           </div>
         </section>
 
-        {/* CTA Section */}
-        <section className="text-center py-24 bg-accent/5 border border-accent/20">
-           <h2 className="font-display text-4xl md:text-6xl font-black uppercase mb-12 italic tracking-tighter">Elevate Your System.</h2>
-           <a 
-            href="/book-now" 
-            className="inline-block bg-accent text-black px-12 py-4 font-display text-xl uppercase font-black hover:bg-white transition-colors"
-           >
-             Join Us in Bangkok
-           </a>
+        {/* Slanted CTA Section */}
+        <section className="relative z-10 my-40">
+          <div className="py-32 text-center bg-accent text-bg clip-path-cta">
+            <div className="max-w-4xl mx-auto px-8">
+              <h2 className="font-display text-4xl md:text-6xl font-black uppercase mb-12 tracking-tighter italic">
+                {language === 'en' ? 'Elevate Your System.' : 'ยกระดับระบบของคุณ'}
+              </h2>
+              <a 
+                href="/book-now" 
+                className="inline-block bg-bg text-accent px-12 py-4 font-display text-xl uppercase font-black hover:scale-105 transition-transform"
+              >
+                {language === 'en' ? 'Join Us in Bangkok' : 'เข้าร่วมกับเราที่กรุงเทพฯ'}
+              </a>
+            </div>
+          </div>
         </section>
       </main>
 

@@ -77,13 +77,27 @@ export default function Team() {
         </section>
 
         {/* Categories Section */}
-        <section className="mt-48 grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10">
+        <section className="mt-48 grid grid-cols-1 md:grid-cols-3 gap-px bg-white/10 border border-white/10 mb-48">
            {['SALES STRATEGY', 'MINDSET COACHING', 'NUTRITION EXPERTS'].map((cat, i) => (
              <div key={i} className="bg-bg p-12 text-center group hover:bg-accent/5 transition-colors">
                 <div className="font-display text-2xl uppercase tracking-tighter text-white">{cat}</div>
                 <div className="mt-4 font-mono text-[10px] text-white tracking-widest uppercase">Expert Pillar 0{i+1}</div>
              </div>
            ))}
+        </section>
+
+        {/* Slanted Network Section */}
+        <section className="relative z-10 -mx-8 md:-mx-24 lg:-mx-32">
+          <div className="py-32 bg-accent text-bg clip-path-cta">
+            <div className="max-w-7xl mx-auto px-8 text-center">
+              <h2 className="font-display text-4xl md:text-6xl font-black uppercase mb-16 tracking-tight italic">The Global Network</h2>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-12">
+                 {['AIMPOWER', 'HEY BRAND', 'YOUNG CREATIVES', 'BKK DISTRICT'].map((partner, i) => (
+                   <div key={i} className="font-display text-xl md:text-2xl tracking-tighter border-b-2 border-bg pb-2">{partner}</div>
+                 ))}
+              </div>
+            </div>
+          </div>
         </section>
       </main>
 

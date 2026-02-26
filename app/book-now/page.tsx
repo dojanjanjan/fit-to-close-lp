@@ -94,17 +94,17 @@ export default function BookNow() {
                 </div>
               </div>
 
-              <div className="p-8 bg-accent/5 border border-accent/20">
+              <div className="p-8 bg-accent text-bg clip-path-learn">
                  <div className="font-display text-2xl uppercase mb-4">Standard Entry Package</div>
                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className="font-display text-5xl text-accent">€ 1.490</span>
-                    <span className="font-mono text-xs text-white uppercase">inc. VAT</span>
+                    <span className="font-display text-5xl">€ 1.490</span>
+                    <span className="font-mono text-xs uppercase">inc. VAT</span>
                  </div>
-                 <ul className="space-y-3 font-mono text-xs uppercase text-white tracking-tight">
-                    <li className="flex gap-3"><span className="text-accent">/</span> Full 5H Performance Masterclass</li>
-                    <li className="flex gap-3"><span className="text-accent">/</span> FTC Playbook (Hardcover + Digital)</li>
-                    <li className="flex gap-3"><span className="text-accent">/</span> Private Rooftop Dinner Bangkok</li>
-                    <li className="flex gap-3"><span className="text-accent">/</span> Lifetime Elite Network Access</li>
+                 <ul className="space-y-3 font-mono text-xs uppercase tracking-tight">
+                    <li className="flex gap-3">/ Full 5H Performance Masterclass</li>
+                    <li className="flex gap-3">/ FTC Playbook (Hardcover + Digital)</li>
+                    <li className="flex gap-3">/ Private Rooftop Dinner Bangkok</li>
+                    <li className="flex gap-3">/ Lifetime Elite Network Access</li>
                  </ul>
               </div>
             </div>
@@ -178,6 +178,13 @@ export default function BookNow() {
             </div>
           </div>
         </div>
+
+        {/* Slanted Bottom Section */}
+        <section className="relative z-10 mt-32 -mx-8 md:-mx-24 lg:-mx-32">
+          <div className="py-24 bg-accent text-bg clip-path-cta text-center">
+             <h3 className="font-display text-4xl font-black uppercase italic tracking-tighter">Start Monday. Close Faster.</h3>
+          </div>
+        </section>
       </main>
 
       <Footer />
