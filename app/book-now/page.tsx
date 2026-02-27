@@ -30,7 +30,7 @@ export default function BookNow() {
     try {
       if (supabase) {
         const { error } = await supabase
-          .from('bookings')
+          .from('ftc_bookings')
           .insert([
             {
               full_name: form.name,
