@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import Image from 'next/image'
 import { useLanguage } from '@/context/LanguageContext'
 import { translations } from '@/lib/translations'
+import { supabase } from '@/lib/supabase'
 
 export default function BookNow() {
   const { language } = useLanguage()
@@ -26,11 +27,38 @@ export default function BookNow() {
     e.preventDefault()
     setLoading(true)
     
-    // Simulate Omise Payment Processing
-    setTimeout(() => {
+    try {
+      if (supabase) {
+        const { error } = await supabase
+          .from('bookings')
+          .insert([
+            {
+              full_name: form.name,
+              email: form.email,
+              mobile: form.mobile,
+              line_id: form.lineId,
+              instagram: form.instagram,
+              package: form.package,
+              status: 'pending'
+            }
+          ])
+        
+        if (error) throw error
+      } else {
+        console.warn('Supabase client not initialized')
+      }
+      
+      // Keep simulation for UI feedback
+      setTimeout(() => {
+        setLoading(false)
+        setSuccess(true)
+      }, 1500)
+
+    } catch (error) {
+      console.error('Error saving booking:', error)
+      alert('An error occurred while processing your registration. Please try again.')
       setLoading(false)
-      setSuccess(true)
-    }, 2000)
+    }
   }
 
   if (success) {
