@@ -16,7 +16,9 @@ export default function BookNow() {
   const [form, setForm] = useState({
     name: '',
     email: '',
-    company: '',
+    mobile: '',
+    lineId: '',
+    instagram: '',
     package: 'standard'
   })
 
@@ -141,13 +143,34 @@ export default function BookNow() {
                   />
                 </div>
                 <div className="space-y-2 group">
-                  <label className="block font-mono text-[10px] uppercase text-muted tracking-widest group-focus-within:text-accent transition-colors">{t.form_company}</label>
+                  <label className="block font-mono text-[10px] uppercase text-muted tracking-widest group-focus-within:text-accent transition-colors">Mobile</label>
+                  <input 
+                    required
+                    type="tel" 
+                    className="w-full bg-transparent border-b border-white/20 py-4 focus:outline-none focus:border-accent text-white font-mono transition-all text-lg"
+                    placeholder="+66 XX XXX XXXX"
+                    value={form.mobile}
+                    onChange={(e) => setForm({ ...form, mobile: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2 group">
+                  <label className="block font-mono text-[10px] uppercase text-muted tracking-widest group-focus-within:text-accent transition-colors">Line ID</label>
                   <input 
                     type="text" 
                     className="w-full bg-transparent border-b border-white/20 py-4 focus:outline-none focus:border-accent text-white font-mono transition-all text-lg"
-                    placeholder="ORGANIZATION"
-                    value={form.company}
-                    onChange={(e) => setForm({ ...form, company: e.target.value })}
+                    placeholder="YOUR LINE ID"
+                    value={form.lineId}
+                    onChange={(e) => setForm({ ...form, lineId: e.target.value })}
+                  />
+                </div>
+                <div className="space-y-2 group">
+                  <label className="block font-mono text-[10px] uppercase text-muted tracking-widest group-focus-within:text-accent transition-colors">Instagram</label>
+                  <input 
+                    type="text" 
+                    className="w-full bg-transparent border-b border-white/20 py-4 focus:outline-none focus:border-accent text-white font-mono transition-all text-lg"
+                    placeholder="@YOURHANDLE"
+                    value={form.instagram}
+                    onChange={(e) => setForm({ ...form, instagram: e.target.value })}
                   />
                 </div>
 
