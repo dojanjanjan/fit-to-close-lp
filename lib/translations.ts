@@ -29,6 +29,8 @@ export const translations = {
       patrick_desc: "High-stakes sales strategist and Head of Sales DACH. Patrick bridges European precision with Asian market energy. Specialist in scaling sales operations through high-performance culture.",
       closer: "Coach Jenny",
       jenny_desc: "Master of tactical negotiation and mindset optimization. Specializes in complex high-ticket closing and psychological leverage. Part of our rotating roster of world-class experts.",
+      jeje: "Coach JeJe",
+      jeje_desc: "Strength and Nutrition Coach. Specialist in performance nutrition and aesthetic muscle building. Dedicated to high-performance discipline and the physical evolution of our closers.",
       tagline: "Real expertise. Raw energy. Ready to close."
     },
     book: {
@@ -71,6 +73,8 @@ export const translations = {
       patrick_desc: "นักวางกลยุทธ์การขายที่มีความเสี่ยงสูงและหัวหน้าฝ่ายขายประจำภูมิภาค DACH แพทริคเชื่อมโยงความแม่นยำแบบยุโรปเข้ากับพลังของตลาดเอเชีย เขาคือผู้เชี่ยวชาญด้านการขยายขนาดการดำเนินงานด้านการขายผ่านวัฒนธรรมการทำงานที่มีประสิทธิภาพสูง",
       closer: "โค้ช เจนนี่",
       jenny_desc: "ปรมาจารย์ด้านการเจรจาต่อรองเชิงกลยุทธ์และการเพิ่มประสิทธิภาพของกรอบความคิด เชี่ยวชาญในการปิดการขายที่ซับซ้อนและมีมูลค่าสูง รวมถึงการใช้ประโยชน์จากจิตวิทยา เป็นส่วนหนึ่งของผู้เชี่ยวชาญระดับโลกที่หมุนเวียนของเรา",
+      jeje: "โค้ช เจเจ",
+      jeje_desc: "นักฝึกสอนความแข็งแรงและโภชนาการ ผู้เชี่ยวชาญด้านโภชนาการเพื่อประสิทธิภาพ และการสร้างกล้ามเนื้อเพื่อความงาม มุ่งมั่นในวินัยและความสม่ำเสมอเพื่อวิวัฒนาการร่างกายสูงสุด",
       tagline: "ความเชี่ยวชาญจริง พลังงานดิบ พร้อมปิดการขาย"
     },
     book: {

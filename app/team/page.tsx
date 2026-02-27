@@ -24,6 +24,13 @@ export default function Team() {
       location: "Bangkok",
       bio: t.jenny_desc,
       image: "/images/team/team_1.png"
+    },
+    {
+      name: "Coach JeJe",
+      role: t.jeje,
+      location: "Bangkok",
+      bio: t.jeje_desc,
+      image: "/images/team/jeje.jpg"
     }
   ]
 
