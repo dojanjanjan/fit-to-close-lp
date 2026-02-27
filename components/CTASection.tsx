@@ -35,7 +35,7 @@ export default function CTASection() {
           JOIN THE CORE
         </h2>
           <a
-            href="#"
+            href="/book-now"
             className={`inline-block bg-bg text-accent px-16 py-6 font-display text-2xl uppercase transition-all duration-500 hover:scale-105 hover:bg-accent hover:text-bg ${isVisible ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-8'}`}
             style={{ transitionDelay: '300ms' }}
           >
