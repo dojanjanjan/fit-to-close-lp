@@ -2,7 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=JetBrains+Mono:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&family=Archivo:wght@900&family=JetBrains+Mono:wght@400;700&display=swap');
 
 @layer base {
   * {
@@ -12,6 +12,8 @@
   body {
     @apply bg-bg text-text font-mono leading-relaxed overflow-x-hidden;
     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
     
     /* Brutalist Grid Background directly on body */
     background-image: 
@@ -34,6 +36,7 @@
   }
 
   .hero-bold {
+    font-family: 'Archivo', 'Archivo Black', sans-serif;
     font-weight: 900;
     letter-spacing: -0.03em;
   }
