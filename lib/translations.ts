@@ -33,6 +33,8 @@ export const translations = {
       jeje_desc: "Strength and Nutrition Coach. Specialist in performance nutrition and aesthetic muscle building. Dedicated to high-performance discipline and the physical evolution of our closers.",
       vivi: "Coach Vivi",
       vivi_desc: "Yoga & Mobility Coach with 10+ years of experience. Vivi specializes in mental clarity and physical resilience, helping high-performers master focus and recovery through advanced breathwork and mobility.",
+      nana: "Coach Nana",
+      nana_desc: "Muay Thai & Boxing Expert with 15+ years of experience. A master of 'The Art of Eight Limbs', Nana bridges traditional Thai combat discipline with modern Western boxing tactics for elite conditioning.",
       tagline: "Real expertise. Raw energy. Ready to close."
     },
     book: {
@@ -79,6 +81,8 @@ export const translations = {
       jeje_desc: "นักฝึกสอนความแข็งแรงและโภชนาการ ผู้เชี่ยวชาญด้านโภชนาการเพื่อประสิทธิภาพ และการสร้างกล้ามเนื้อเพื่อความงาม มุ่งมั่นในวินัยและความสม่ำเสมอเพื่อวิวัฒนาการร่างกายสูงสุด",
       vivi: "โค้ช วีวี่",
       vivi_desc: "โค้ชโยคะและการเคลื่อนไหวที่มีประสบการณ์มากกว่า 10 ปี วีวี่เชี่ยวชาญในการสร้างความชัดเจนทางจิตใจและความยืดหยุ่นของร่างกาย ช่วยให้ผู้ที่มีผลงานสูงเชี่ยวชาญในการโฟกัสและการฟื้นฟูผ่านเทคนิคการหายใจและการเคลื่อนไหวขั้นสูง",
+      nana: "โค้ช นานา",
+      nana_desc: "ผู้เชี่ยวชาญด้านมวยไทยและมวยสากลที่มีประสบการณ์มากกว่า 15 ปี ปรมาจารย์ด้าน 'ศาสตร์แห่งอาวุธทั้งแปด' นานาเชื่อมโยงระเบียบวินัยการต่อสู้แบบไทยดั้งเดิมเข้ากับกลยุทธ์มวยสากลสมัยใหม่เพื่อการปรับสภาพร่างกายระดับสูง",
       tagline: "ความเชี่ยวชาญจริง พลังงานดิบ พร้อมปิดการขาย"
     },
     book: {
