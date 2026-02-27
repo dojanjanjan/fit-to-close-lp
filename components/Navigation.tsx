@@ -46,7 +46,7 @@ export default function Navigation() {
             <a href="/book-now" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
               Book now
             </a>
-            <a href="#contact" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+            <a href="/contact" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
               Contact
             </a>
           </div>
@@ -98,7 +98,7 @@ export default function Navigation() {
             Book now
           </a>
           <a 
-            href="#contact" 
+            href="/contact" 
             className="text-text hover:text-accent transition-colors uppercase"
             onClick={() => setMenuOpen(false)}
           >
