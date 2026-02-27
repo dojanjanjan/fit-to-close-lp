@@ -30,7 +30,7 @@ export default function Team() {
       role: t.jeje,
       location: "Bangkok",
       bio: t.jeje_desc,
-      image: "/images/team/jeje.jpg"
+      image: "/images/team/jeje_2.jpg"
     }
   ]
 
