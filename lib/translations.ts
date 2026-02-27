@@ -26,7 +26,7 @@ export const translations = {
       title: "THE MASTERMINDS",
       subtitle: "Meet the architects of high-stakes performance. A rotating roster of world-class sales strategists, mindset coaches, and nutrition experts dedicated to one goal: your evolution.",
       lead: "Sales Mastermind",
-      closer: "Mindset & Nutrition",
+      closer: "Coach Jenny",
       tagline: "Real expertise. Raw energy. Ready to close."
     },
     book: {
@@ -65,8 +65,8 @@ export const translations = {
     team: {
       title: "เดอะมาสเตอร์ไมด์",
       subtitle: "พบกับผู้ออกแบบประสิทธิภาพที่มีเดิมพันสูง รายชื่อผู้เชี่ยวชาญด้านกลยุทธ์การขายระดับโลก โค้ชด้านความคิด และผู้เชี่ยวชาญด้านโภชนาการที่หมุนเวียนกันมาเพื่อเป้าหมายเดียว: วิวัฒนาการของคุณ",
-      lead: "ผู้เชี่ยวชาญด้านการขาย",
-      closer: "ความคิดและโภชนาการ",
+      lead: "กลยุทธ์การขายระดับสูง",
+      closer: "โค้ช เจนนี่",
       tagline: "ความเชี่ยวชาญจริง พลังงานดิบ พร้อมปิดการขาย"
     },
     book: {

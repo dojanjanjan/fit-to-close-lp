@@ -19,7 +19,7 @@ export default function Team() {
       image: "/images/fit-to-close_ceo_patrick_wilth.webp"
     },
     {
-      name: "The Closer",
+      name: "Coach Jenny",
       role: t.closer,
       location: "Bangkok",
       bio: "Master of tactical negotiation and mindset optimization. Specializes in complex high-ticket closing and psychological leverage. Part of our rotating roster of world-class experts.",
