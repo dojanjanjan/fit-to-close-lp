@@ -56,7 +56,7 @@ export default function Team() {
         <div className="max-w-7xl mx-auto px-8">
           <header className="mb-32 animate-slideIn">
             <div className="font-mono text-accent text-sm mb-4 tracking-[0.3em] uppercase">{t.tagline}</div>
-            <h1 className="font-display text-7xl md:text-9xl font-black uppercase leading-[0.85] mb-12 tracking-tighter">
+            <h1 className="font-display text-[11vw] md:text-9xl font-black uppercase leading-[0.85] mb-12 tracking-tighter break-words">
               {t.title.split(' ')[0]}<br />
               <span className="text-white">{t.title.split(' ').slice(1).join(' ')}</span>
             </h1>

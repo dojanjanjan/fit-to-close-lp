@@ -19,7 +19,7 @@ export default function About() {
           {/* Header Section */}
           <header className="mb-32 animate-slideIn">
             <div className="font-mono text-accent text-sm mb-4 tracking-[0.3em] uppercase">Holistic Performance / BKK</div>
-            <h1 className="font-display text-6xl md:text-9xl font-black uppercase leading-[0.85] mb-12 tracking-tighter">
+            <h1 className="font-display text-[11vw] md:text-9xl font-black uppercase leading-[0.85] mb-12 tracking-tighter break-words">
               {t.title.split(' ')[0]}<br />
               <span className="text-white">{t.title.split(' ').slice(1).join(' ')}</span>
             </h1>
