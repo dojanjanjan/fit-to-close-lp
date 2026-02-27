@@ -94,12 +94,12 @@ export default function BookNow() {
                 </div>
               </div>
 
-              <div className="p-8 bg-accent text-bg clip-path-learn">
-                 <div className="font-display text-2xl uppercase mb-4">Standard Entry Package</div>
-                 <div className="flex items-baseline gap-2 mb-6">
+              <div className="p-8 bg-accent text-bg clip-path-learn min-h-[450px] flex flex-col justify-center">
+                 <div className="font-display text-2xl uppercase mb-2">Standard Entry Package</div>
+                 <div className="flex items-baseline gap-2 mb-4">
                     <span className="font-display text-5xl">2.900 THB</span>
                  </div>
-                 <ul className="space-y-3 font-mono text-xs uppercase tracking-tight">
+                 <ul className="space-y-1.5 font-mono text-[10px] uppercase tracking-tight">
                     <li className="flex gap-3">/ Full 5H Performance Masterclass</li>
                     <li className="flex gap-3">/ FTC Playbook (Digital)</li>
                     <li className="flex gap-3">/ Private Rooftop Dinner Bangkok</li>
