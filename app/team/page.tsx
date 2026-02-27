@@ -15,14 +15,14 @@ export default function Team() {
       name: "Patrick Wilth",
       role: t.lead,
       location: "Hamburg / Bangkok",
-      bio: "High-stakes sales strategist and Head of Sales DACH. Patrick bridges European precision with Asian market energy. Specialist in scaling sales operations through high-performance culture.",
+      bio: t.patrick_desc,
       image: "/images/fit-to-close_ceo_patrick_wilth.webp"
     },
     {
       name: "Coach Jenny",
       role: t.closer,
       location: "Bangkok",
-      bio: "Master of tactical negotiation and mindset optimization. Specializes in complex high-ticket closing and psychological leverage. Part of our rotating roster of world-class experts.",
+      bio: t.jenny_desc,
       image: "/images/team/team_1.png"
     }
   ]

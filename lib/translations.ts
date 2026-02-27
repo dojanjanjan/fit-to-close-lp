@@ -26,7 +26,9 @@ export const translations = {
       title: "THE MASTERMINDS",
       subtitle: "Meet the architects of high-stakes performance. A rotating roster of world-class sales strategists, mindset coaches, and nutrition experts dedicated to one goal: your evolution.",
       lead: "Sales Mastermind",
+      patrick_desc: "High-stakes sales strategist and Head of Sales DACH. Patrick bridges European precision with Asian market energy. Specialist in scaling sales operations through high-performance culture.",
       closer: "Coach Jenny",
+      jenny_desc: "Master of tactical negotiation and mindset optimization. Specializes in complex high-ticket closing and psychological leverage. Part of our rotating roster of world-class experts.",
       tagline: "Real expertise. Raw energy. Ready to close."
     },
     book: {
@@ -66,7 +68,9 @@ export const translations = {
       title: "เดอะมาสเตอร์ไมด์",
       subtitle: "พบกับผู้ออกแบบประสิทธิภาพที่มีเดิมพันสูง รายชื่อผู้เชี่ยวชาญด้านกลยุทธ์การขายระดับโลก โค้ชด้านความคิด และผู้เชี่ยวชาญด้านโภชนาการที่หมุนเวียนกันมาเพื่อเป้าหมายเดียว: วิวัฒนาการของคุณ",
       lead: "กลยุทธ์การขายระดับสูง",
+      patrick_desc: "นักวางกลยุทธ์การขายที่มีความเสี่ยงสูงและหัวหน้าฝ่ายขายประจำภูมิภาค DACH แพทริคเชื่อมโยงความแม่นยำแบบยุโรปเข้ากับพลังของตลาดเอเชีย เขาคือผู้เชี่ยวชาญด้านการขยายขนาดการดำเนินงานด้านการขายผ่านวัฒนธรรมการทำงานที่มีประสิทธิภาพสูง",
       closer: "โค้ช เจนนี่",
+      jenny_desc: "ปรมาจารย์ด้านการเจรจาต่อรองเชิงกลยุทธ์และการเพิ่มประสิทธิภาพของกรอบความคิด เชี่ยวชาญในการปิดการขายที่ซับซ้อนและมีมูลค่าสูง รวมถึงการใช้ประโยชน์จากจิตวิทยา เป็นส่วนหนึ่งของผู้เชี่ยวชาญระดับโลกที่หมุนเวียนของเรา",
       tagline: "ความเชี่ยวชาญจริง พลังงานดิบ พร้อมปิดการขาย"
     },
     book: {
