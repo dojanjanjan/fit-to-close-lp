@@ -22,18 +22,21 @@ export default function Navigation() {
 
   return (
     <nav className="sticky top-0 z-[100] flex justify-between items-center py-8 px-8 uppercase text-sm tracking-wider transition-all duration-300 bg-black/80 backdrop-blur-sm">
-      <div className="flex items-center gap-3">
+      <a href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
         <div className="font-display text-2xl font-black italic bg-gradient-to-b from-white to-accent bg-clip-text text-transparent">
           FTC<span className="text-xs">©</span>
         </div>
         <div className="font-mono text-sm text-muted uppercase tracking-wider hidden md:block">
           Bangkok 2026
         </div>
-      </div>
+      </a>
       
       <div className="flex items-center gap-4">
         {/* Desktop Menu */}
           <div className="hidden md:flex gap-8">
+            <a href="/" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
+              Home
+            </a>
             <a href="/about" className="text-text hover:text-accent transition-all duration-300 hover:scale-105">
               About
             </a>
@@ -66,6 +69,13 @@ export default function Navigation() {
         menuOpen ? 'translate-x-0' : 'translate-x-full'
       }`}>
         <div className="flex flex-col gap-6 p-8 pt-24">
+          <a 
+            href="/" 
+            className="text-text hover:text-accent transition-colors uppercase"
+            onClick={() => setMenuOpen(false)}
+          >
+            Home
+          </a>
           <a 
             href="/about" 
             className="text-text hover:text-accent transition-colors uppercase"
