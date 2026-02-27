@@ -1,5 +1,6 @@
 import Navigation from '@/components/Navigation'
 import Hero from '@/components/Hero'
+import EventDetails from '@/components/EventDetails'
 import SportSection from '@/components/SportSection'
 import StackSection from '@/components/StackSection'
 import LearnSection from '@/components/LearnSection'
@@ -14,6 +15,7 @@ export default function Home() {
       <CookieBanner />
       <Navigation />
       <Hero />
+      <EventDetails />
       <SportSection />
       <StackSection />
       <LearnSection />
