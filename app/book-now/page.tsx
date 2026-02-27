@@ -82,16 +82,16 @@ export default function BookNow() {
 
             <div className="space-y-8">
               <p className="text-white text-xl font-light leading-relaxed">
-                Connect with the elite. Elevate your system. This is your high-stakes upgrade. Join us on the rooftops of Bangkok.
+                Connect with the elite. Elevate your system. This is your high-stakes upgrade. Join us on the rooftops and extraordinary locations of Bangkok.
               </p>
               
               <div className="grid grid-cols-2 gap-px bg-white/10 border border-white/10">
                 <div className="bg-white/[0.02] p-8 space-y-2">
-                  <div className="font-display text-3xl">15</div>
+                  <div className="font-display text-3xl">20</div>
                   <div className="font-mono text-[10px] text-white uppercase tracking-widest">Seats Total</div>
                 </div>
                 <div className="bg-white/[0.02] p-8 space-y-2">
-                  <div className="font-display text-3xl text-accent">04</div>
+                  <div className="font-display text-3xl text-accent">08</div>
                   <div className="font-mono text-[10px] text-white uppercase tracking-widest">Left for BKK</div>
                 </div>
               </div>
