@@ -97,12 +97,11 @@ export default function BookNow() {
               <div className="p-8 bg-accent text-bg clip-path-learn">
                  <div className="font-display text-2xl uppercase mb-4">Standard Entry Package</div>
                  <div className="flex items-baseline gap-2 mb-6">
-                    <span className="font-display text-5xl">€ 1.490</span>
-                    <span className="font-mono text-xs uppercase">inc. VAT</span>
+                    <span className="font-display text-5xl">2.900 THB</span>
                  </div>
                  <ul className="space-y-3 font-mono text-xs uppercase tracking-tight">
                     <li className="flex gap-3">/ Full 5H Performance Masterclass</li>
-                    <li className="flex gap-3">/ FTC Playbook (Hardcover + Digital)</li>
+                    <li className="flex gap-3">/ FTC Playbook (Digital)</li>
                     <li className="flex gap-3">/ Private Rooftop Dinner Bangkok</li>
                     <li className="flex gap-3">/ Lifetime Elite Network Access</li>
                  </ul>
