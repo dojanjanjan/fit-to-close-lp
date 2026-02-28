@@ -16,12 +16,20 @@ export default function ContactPage() {
   const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setLoading(true)
-    // Simulate API call
-    setTimeout(() => {
-      setLoading(false)
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formState),
+      })
+      if (!res.ok) throw new Error('Failed')
       setSent(true)
       setFormState({ name: '', email: '', message: '' })
-    }, 1500)
+    } catch {
+      alert('An error occurred. Please try again or email us directly at bkk@societe-bangkok.com')
+    } finally {
+      setLoading(false)
+    }
   }
 
   const handleSubscribe = async (e: React.FormEvent) => {
@@ -165,7 +173,7 @@ export default function ContactPage() {
                 <div className="space-y-2 font-mono text-sm uppercase">
                   <p className="text-white">Young Creatives BKK / Hey Brand</p>
                   <p className="text-muted-foreground">Bangkok, Thailand</p>
-                  <a href="mailto:hello@fit-to-close.com" className="text-accent hover:text-white transition-colors">hello@fit-to-close.com</a>
+                  <a href="mailto:bkk@societe-bangkok.com" className="text-accent hover:text-white transition-colors">bkk@societe-bangkok.com</a>
                 </div>
               </div>
 

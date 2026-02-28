@@ -28,6 +28,7 @@ export default function BookNow() {
     setLoading(true)
     
     try {
+      // Save to Supabase if available
       if (supabase) {
         const { error } = await supabase
           .from('ftc_bookings')
@@ -42,21 +43,22 @@ export default function BookNow() {
               status: 'pending'
             }
           ])
-        
-        if (error) throw error
-      } else {
-        console.warn('Supabase client not initialized')
+        if (error) console.warn('Supabase error:', error)
       }
-      
-      // Keep simulation for UI feedback
-      setTimeout(() => {
-        setLoading(false)
-        setSuccess(true)
-      }, 1500)
 
+      // Send email notifications
+      const res = await fetch('/api/book', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(form),
+      })
+      if (!res.ok) throw new Error('Mail failed')
+
+      setLoading(false)
+      setSuccess(true)
     } catch (error) {
-      console.error('Error saving booking:', error)
-      alert('An error occurred while processing your registration. Please try again.')
+      console.error('Error processing booking:', error)
+      alert('An error occurred. Please try again or email us at bkk@societe-bangkok.com')
       setLoading(false)
     }
   }
