@@ -28,31 +28,13 @@ export default function BookNow() {
     setLoading(true)
     
     try {
-      // Save to Supabase if available
-      if (supabase) {
-        const { error } = await supabase
-          .from('ftc_bookings')
-          .insert([
-            {
-              full_name: form.name,
-              email: form.email,
-              mobile: form.mobile,
-              line_id: form.lineId,
-              instagram: form.instagram,
-              package: form.package,
-              status: 'pending'
-            }
-          ])
-        if (error) console.warn('Supabase error:', error)
-      }
-
-      // Send email notifications
+      // Send registration via API (handles both Email and Supabase)
       const res = await fetch('/api/book', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(form),
       })
-      if (!res.ok) throw new Error('Mail failed')
+      if (!res.ok) throw new Error('Registration failed')
 
       setLoading(false)
       setSuccess(true)

@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import nodemailer from 'nodemailer'
+import { supabase } from '@/lib/supabase'
 
 const transporter = nodemailer.createTransport({
   host: process.env.MAIL_HOST,
@@ -19,6 +20,25 @@ export async function POST(req: NextRequest) {
   }
 
   try {
+    // Save to Supabase
+    const { error: dbError } = await supabase
+      .from('ftc_bookings')
+      .insert([
+        {
+          full_name: name,
+          email: email,
+          mobile: mobile,
+          line_id: lineId || null,
+          instagram: instagram || null,
+          package: pkg || 'standard',
+          status: 'pending'
+        }
+      ])
+
+    if (dbError) {
+      console.error('Supabase error:', dbError)
+    }
+
     // Notification to FTC team
     await transporter.sendMail({
       from: `"${process.env.MAIL_FROM_NAME || 'Societe Bangkok'}" <${process.env.MAIL_FROM_ADDRESS}>`,
