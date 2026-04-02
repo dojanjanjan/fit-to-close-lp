@@ -92,6 +92,31 @@ export default function BookNow() {
               </h1>
             </header>
 
+            <div className="border border-accent/30 p-8 mb-12 relative">
+              <div className="absolute top-0 left-6 -translate-y-1/2 bg-accent text-bg px-3 py-1 font-bold text-xs uppercase tracking-widest">
+                Upcoming Event
+              </div>
+              <div className="relative aspect-video w-full mb-6 overflow-hidden">
+                <Image src="/images/kohfit_x_fittclose.webp" alt="KOH FIT x FIT TO CLOSE" fill className="object-cover" />
+              </div>
+              <h3 className="font-display text-2xl md:text-3xl font-black uppercase italic leading-none mb-3 bg-gradient-to-r from-white to-accent bg-clip-text text-transparent">
+                KOH FIT x FIT TO CLOSE
+              </h3>
+              <p className="font-mono text-lg text-accent uppercase tracking-tight mb-4">
+                Aug. 10th &ndash; Aug. 16th, 2026
+              </p>
+              <p className="font-display text-base uppercase italic text-text mb-2">
+                One week. One environment. Full transformation.
+              </p>
+              <p className="font-mono text-xs text-muted leading-relaxed mb-4">
+                Train your body. Sharpen your mind. Elevate your business.<br />
+                Elite fitness meets high-performance sales &amp; business coaching — in Koh Samui.
+              </p>
+              <span className="font-mono text-xs text-muted uppercase tracking-widest">
+                More Information TBA
+              </span>
+            </div>
+
             <div className="space-y-8">
               <p className="text-white text-xl font-light leading-relaxed">
                 Connect with the elite. Elevate your system. This is your high-stakes upgrade. Join us on the rooftops and extraordinary locations of Bangkok.
